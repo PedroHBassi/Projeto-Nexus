@@ -85,7 +85,7 @@
                 Novo cadastro</h2>
             <p>Preencha os campos abaixo. Campos exibidos variam conforme o módulo.</p>
             <form th:action="@{/{modulo}/salvar(modulo=${modulo})}" th:object="${item}" method="post" class="formgrid">
-                <div th:if="${modulo=='funcionarios'}" class="formgrid nested"><label>CPF<input th:field="*{cpf}"
+                <div th:if="${modulo=='funcionarios'}" class="formgrid nested"><label>CPF<input type="number" th:field="*{cpf}"
                             required placeholder="Somente números"></label><label>Nome completo<input th:field="*{nome}"
                             required></label><label>Salário (R$)<input type="number" step="0.01" th:field="*{salario}"
                             required></label></div>
